@@ -1,0 +1,15 @@
+
+
+
+
+
+
+
+
+# Layouts 
+
+ViewGroup is the base class for layouts.
+You can inherit and customize layouts!
+
+RelativeLayout is much better than Linear when dealing with 
+scalability of screen sizes (different devices).

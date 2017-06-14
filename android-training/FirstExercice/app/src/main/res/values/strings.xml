@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">FirstExercice</string>
+    <string name="title_activity_show_text">ShowTextActivity</string>
+</resources>
