@@ -1,7 +1,11 @@
 package com.exercices.igoroctaviano.secondexercise;
 
+import com.google.gson.annotations.SerializedName;
+
 public class Profile {
+
     private String name;
+    @SerializedName("birth_year")
     private String birthday;
     private String gender;
 
@@ -11,19 +15,15 @@ public class Profile {
         this.gender = gender;
     }
 
-    public Profile() {
-
+    public String getBirthday() {
+        return this.birthday;
     }
 
-    public String getBirthday() { return birthday; }
+    public String getGender() {
+        return this.gender;
+    }
 
-    public void setBirthday(String birth) { this.birthday = birth; }
-
-    public String getGender() { return gender; }
-
-    public void setGender(String gender) { this.gender = gender; }
-
-    public String getName() { return name; }
-
-    public void setName(String name) { this.name = name; }
+    public String getName() {
+        return this.name;
+    }
 }

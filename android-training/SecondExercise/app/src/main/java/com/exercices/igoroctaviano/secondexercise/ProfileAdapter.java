@@ -21,16 +21,16 @@ public class ProfileAdapter extends RecyclerView.Adapter<ProfileAdapter.ProfileV
 
         public ProfileViewHolder(View itemView) {
             super(itemView);
-            this.picture = (ImageView) itemView.findViewById(R.id.img_portrait);
+            this.picture = itemView.findViewById(R.id.img_portrait);
             this.picture.setClipToOutline(true);
-            this.name = (TextView) itemView.findViewById(R.id.input_name);
-            this.birthday = (TextView) itemView.findViewById(R.id.input_birthday);
-            this.gender = (TextView) itemView.findViewById(R.id.input_gender);
+            this.name = itemView.findViewById(R.id.input_name);
+            this.birthday = itemView.findViewById(R.id.input_birthday);
+            this.gender = itemView.findViewById(R.id.input_gender);
         }
     }
 
-    List<Profile> profiles;
-    Context context;
+    private List<Profile> profiles;
+    private Context context;
 
     public ProfileAdapter(List<Profile> profiles, Context context) {
         this.profiles = profiles;
@@ -46,7 +46,7 @@ public class ProfileAdapter extends RecyclerView.Adapter<ProfileAdapter.ProfileV
 
     @Override
     public void onBindViewHolder(ProfileViewHolder holder, int position) {
-        Profile profile = profiles.get(position);
+        Profile profile = this.profiles.get(position);
 
         holder.picture.setImageResource(R.drawable.igor);
         holder.name.setText(profile.getName());
@@ -55,7 +55,5 @@ public class ProfileAdapter extends RecyclerView.Adapter<ProfileAdapter.ProfileV
     }
 
     @Override
-    public int getItemCount() {
-        return profiles.size();
-    }
+    public int getItemCount() { return this.profiles.size(); }
 }
